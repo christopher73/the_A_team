@@ -1,0 +1,23 @@
+{
+  "name": "the_a_team",
+  "version": "1.0.0",
+  "description": "Finacial application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopher73/the_A_team.git"
+  },
+  "author": "Cristopher, Deedee , Abir  and Fatau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christopher73/the_A_team/issues"
+  },
+  "homepage": "https://github.com/christopher73/the_A_team#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
