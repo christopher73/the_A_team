@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/christopher73/the_A_team#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.18.11",
+    "sequelize": "^5.7.5"
   }
 }
