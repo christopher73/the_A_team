@@ -1,5 +1,5 @@
--- DROP DATABASE IF EXISTS fin_app_db;
--- create database fin_app_db;
+DROP DATABASE IF EXISTS fin_app_db;
+create database fin_app_db;
 
 -- USE fin_app_db;
 

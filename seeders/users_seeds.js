@@ -1,5 +1,9 @@
-"use strict";
+//  POPULATE DB
+//  ex:
+//  do  "sequelize db:seed:all" to apply seeds
+//  =============================================================
 
+"use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
@@ -17,13 +21,6 @@ module.exports = {
       ],
       {}
     );
-    /*
-      Add altering commands here.
-      Return a promise to correctly handle asynchronicity.
-
-      Example:
-      
-    */
   },
 
   down: function(queryInterface, Sequelize) {
