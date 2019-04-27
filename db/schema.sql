@@ -1,12 +1,12 @@
-DROP DATABASE IF EXISTS fin_app_db;
-create database fin_app_db;
+-- DROP DATABASE IF EXISTS fin_app_db;
+-- create database fin_app_db;
 
-USE fin_app_db;
+-- USE fin_app_db;
 
-INSERT INTO `Users`(first_name , last_name, email ,password_string) 
-    VALUES ('christopher','fajardo','cffr90@gmail.com','password123'),
-           ('josh','kraft','joshuaskraft@gmail.com','password123'),
-          ('abir', 'hossain' , 'abir212@gmail.com' , 'password123' );
+-- INSERT INTO `Users`(first_name , last_name, email ,password_string) 
+--     VALUES ('christopher','fajardo','cffr90@gmail.com','password123'),
+--            ('josh','kraft','joshuaskraft@gmail.com','password123'),
+--           ('abir', 'hossain' , 'abir212@gmail.com' , 'password123' );
 
 -- INSERT INTO `financial_info`(id , monthly_salary) 
 --     SELECT users.id, 1000 FROM `users` WHERE users.first_name = "christopher"
