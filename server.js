@@ -8,12 +8,18 @@ var PORT = process.env.PORT || 8080;
 // app.engine(".hbs", hbs({ defaultLayout: "main", extname: ".hbs" }));
 // app.set("view engine", ".hbs");
 
-var routes = require("./controllers/controller.js");
+// Requiring our models for syncing
+var db = require("./models");
 
-app.use(routes);
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+//app.use(routes);
+//routes
+require("./controllers/controller.js")(app);
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
-  console.log("App listening on PORT  127.0.0.1:" + PORT);
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });

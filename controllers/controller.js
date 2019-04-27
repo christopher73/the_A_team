@@ -1,22 +1,21 @@
-var express = require("express");
-
-var router = express.Router();
-
 // Import the model (burger_db.js) to use its database functions.
-var users = require("../models/users.js");
+var db = require("../models");
 
-// Create all our routes and set up logic within those routes where required.
-router.get("/users", function(req, res) {
-  users.all(function(data) {
-    var hbsObject = {
-      burgers: data
-    };
-    console.log(hbsObject);
-    //res.render("home");
+module.exports = function(app) {
+  // Create all our routes and set up logic within those routes where required.
+  app.get("/users", function(req, res) {
+    // Here we add an "include" property to our options in our findAll query
+    // We set the value to an array of the models we want to include in a left outer join
+    // In this case, just db.Post
+    db.Users.findAll({
+      attributes: ["first_name"]
+    }).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
   });
-});
+};
 
-// router.post("/api/burgers", function(req, res) {
+// app.post("/api/burgers", function(req, res) {
 //   users.create(
 //     ["name", "sleepy"],
 //     [req.body.name, req.body.sleepy],
@@ -27,7 +26,7 @@ router.get("/users", function(req, res) {
 //   );
 // });
 
-// router.put("/api/burgers/:id", function(req, res) {
+// app.put("/api/burgers/:id", function(req, res) {
 //   var condition = "id = " + req.params.id;
 
 //   console.log("condition", condition);
@@ -46,6 +45,3 @@ router.get("/users", function(req, res) {
 //     }
 //   );
 // });
-
-// Export routes for server.js to use.
-module.exports = router;

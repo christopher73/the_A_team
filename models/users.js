@@ -1,24 +1,27 @@
-// Import the ORM to create functions that will interact with the database.
-var orm = require("../config/orm.js");
+module.exports = function(sequelize, DataTypes) {
+  var Users = sequelize.define("Users", {
+    user_name: {
+      type: DataTypes.STRING
+    },
+    first_name: {
+      type: DataTypes.STRING
+    },
+    last_name: {
+      type: DataTypes.STRING
+    },
+    email: {
+      type: DataTypes.STRING
+    },
+    password: {
+      type: DataTypes.STRING
+    }
+  });
 
-var users = {
-  all: function(cb) {
-    orm.all("users", function(res) {
-      cb(res);
-    });
-  }
-  // The variables cols and vals are arrays.
-  //   create: function(cols, vals, cb) {
-  //     orm.create("burgers", cols, vals, function(res) {
-  //       cb(res);
-  //     });
-  //   },
-  //   update: function(objColVals, condition, cb) {
-  //     orm.update("burgers", objColVals, condition, function(res) {
-  //       cb(res);
-  //     });
-  //   }
+  // Post.associate = function(models) {
+  //   // We're saying that a Post should belong to an Author
+  //   // A Post can't be created without an Author due to the foreign key constraint
+  //   Post.belongsTo(models.Author, {
+  //     foreignKey: {
+  //
+  return Users;
 };
-
-// Export the database functions for the controller (catsController.js).
-module.exports = users;
