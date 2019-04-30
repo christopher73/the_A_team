@@ -1,98 +1,88 @@
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url("C:/Users/JUAN MEDINA/Documents/financehub/data/banner4.jpeg");
-    height: 100%; 
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("/assets/img/banner4.jpeg");
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .topnav {
-    overflow:hidden;
-    background-color:grey;
+  overflow: hidden;
+  background-color: grey;
 }
 
 .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-
+  background-color: #ddd;
+  color: black;
 }
 
 .topnav a.active {
-    background-color: rgb(24, 223, 90);
-    color: white;
-
+  background-color: rgb(24, 223, 90);
+  color: white;
 }
 h3 {
-
- text-align: center;
-    color: white;
-
+  text-align: center;
+  color: white;
 }
 
 h2 {
-    text-align: center;
-    color: white;
+  text-align: center;
+  color: white;
 }
 
 p {
-    text-align: center;
-    color: white;
-
+  text-align: center;
+  color: white;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .signin {
-    float: right;
+  float: right;
 }
-
 
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
-
 
 .row {
-    float: left;
-    width: 33.33%;
-    padding: 50px;
-    height: 300px;
-   
-
-    
-    
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  height: 300px;
 }
 
-.left, .right {
-    width: 50%;
-    background-color:#aaa;
+.left,
+.right {
+  width: 50%;
+  background-color: #aaa;
 }
 
 .middle {
-    width: 50%;
-    background-color:#ccc;
+  width: 50%;
+  background-color: #ccc;
 }
 @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
+  .column {
+    width: 100%;
   }
+}
 
 /*.column2 {
 
@@ -101,14 +91,5 @@ p {
     color: white;
 }*/
 .table-bordered {
-    color: #f2f2f2;
+  color: #f2f2f2;
 }
-
-
-
-
-
-
-
-
-

@@ -4,6 +4,11 @@ var db = require("../models");
 module.exports = function(app) {
   //  POST USERS LOGIN INFO
   //  =============================================================
+
+  app.get("/", function(req, res) {
+    res.render("index");
+  });
+
   app.post("/submit_user", function(req, res) {
     db.Users.create(req.body).then(function(dbUserInfo) {
       res.json(dbUserInfo);
