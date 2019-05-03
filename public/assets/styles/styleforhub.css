@@ -1,37 +1,14 @@
 body {
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("/assets/img/banner4.jpeg");
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.topnav {
-  overflow: hidden;
-  background-color: grey;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: rgb(24, 223, 90);
-  color: white;
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
 }
 h3 {
   text-align: center;
@@ -46,9 +23,6 @@ h2 {
 p {
   text-align: center;
   color: white;
-}
-* {
-  box-sizing: border-box;
 }
 
 .signin {
@@ -78,11 +52,6 @@ p {
   width: 50%;
   background-color: #ccc;
 }
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
 
 /*.column2 {
 
@@ -94,7 +63,8 @@ p {
   color: #f2f2f2;
 }
 
-input[type=text], input[type=password] {
+/* input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -103,12 +73,13 @@ input[type=text], input[type=password] {
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   background-color: gray;
   outline: none;
-}
+} */
 
-button {
+/* button {
   background-color: rgb(24, 223, 90);
   color: white;
   padding: 14px 20px;
@@ -117,66 +88,35 @@ button {
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
-}
+} */
 
 button:hover {
-  opacity:1;
-}
-
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: red;
-}
-
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
+  opacity: 1;
 }
 
 .container {
   padding: 16px;
 }
 
-.modal{
-   background-image: url(/Users/Fatoumatta/Desktop/SignInPage/images/signOnpage.jpeg);
+.modal {
+  background-image: url(/Users/Fatoumatta/Desktop/SignInPage/images/signOnpage.jpeg);
 }
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   background-color: gray;
   padding-top: 50px;
 }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto;
-  border: 1px solid #888;
-  width: 80%; 
-}
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
-}
- 
-.close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
 }
 
 .clearfix::after {
@@ -184,9 +124,19 @@ hr {
   clear: both;
   display: table;
 }
-
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-     width: 100%;
-  }
+.btn {
+  background-color: rgb(73, 155, 73);
+  border-color: rgb(37, 104, 37);
+}
+.btn-primary:hover {
+  background-color: rgb(37, 104, 37);
+  border-color: rgb(73, 155, 73);
+}
+.cancelbtn {
+  background-color: red;
+  border-color: rgb(121, 14, 14);
+}
+.cancelbtn:hover {
+  border-color: red;
+  background-color: rgb(121, 14, 14);
 }
