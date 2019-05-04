@@ -1,148 +1,102 @@
-{{!-- <div class="topnav">
-    <a class="active" href="#Home">Home</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
-    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
-
-</div> --}}
 <div id="id01" class="modal">
-    <span onclick="document.getElementById('id01').style.display='none'" class="close"
-        title="Close Modal">&times;</span>
-    <form class="form-signin">
-        <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <form class="form-login">
         <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
+        <label class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control m-2" placeholder="Email address" required=""
             autofocus="">
-        <label for="inputPassword" class="sr-only">Password</label>
+        <label class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control m-2" placeholder="Password" required="">
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button id="login-btn" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
         <button onclick="document.getElementById('id01').style.display='none'"
             class="btn btn-lg btn-secondary btn-block cancelbtn">Cancel</button>
-        <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
     </form>
 </div>
 <div id="id02" class="modal">
-    <span onclick="document.getElementById('id02').style.display='none'" class="close"
-        title="Close Modal">&times;</span>
     <form class="form-signin">
-        <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Please sign Up</h1>
-        <label for="user-name" class="sr-only">User Name</label>
-        <input type="text" id="UserName" class="form-control m-2" placeholder="User Name" required="">
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control m-2" placeholder="Email address" required=""
+        <label class="sr-only">User Name</label>
+        <input type="text" id="user-name" class="form-control m-2" placeholder="User Name" required="">
+        <label class="sr-only">Email address</label>
+        <input type="email" id="user-email" class="form-control m-2" placeholder="Email address" required=""
             autofocus="">
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control m-2" placeholder="Password" required="">
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="re-entry-inputPassword" class="form-control m-2" placeholder="Re-entry Password"
-            required="">
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up !!!</button>
+        <label class="sr-only">Password</label>
+        <input type="password" id="input-password" class="form-control m-2" placeholder="Password" required="">
+        <button id="signup-btn" class="btn btn-lg btn-primary btn-block" type="submit">Sign Up !!!</button>
         <button onclick="document.getElementById('id02').style.display='none'"
             class="btn btn-lg btn-secondary btn-block cancelbtn">Cancel</button>
-        <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
     </form>
 </div>
-
-
-<div style="padding-left:16px">
-    <h2 style="color:white"> The Finance Hub</h2>
-
-
-    <div class="container">
-        <p>About..</p>
-        <!--<h2>Basic Table</h2>-->
-        <!--<p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p> -->
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>How It Works<div class="form-group" style="text-align:center center">
-                            <label for="usr"></label>
-                            <input type="text" class="form-control" id="usr">
-                        </div>
-                    </th>
-
+<div class="container" id="mainpage">
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-light intro ">
+        <div class="col-md-10 p-lg-10 mx-auto my-5">
+            <h1 class="display-6 font-weight-normal">Live like no else so that you can later live like no one else (Dave
+                Ramsey)
+                to which you need a budget, save and invest and that is exactly what the Finance Hub can help you
+                achieve.
+                Click on the sign up button to learn more</h1>
+            <button id="btn-m" class="btn btn-primary float-right" href="#">Sign
+                Up</button>
+        </div>
+        <div class="product-device shadow-sm d-none d-md-block"></div>
+        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
     </div>
+    <div class="card-deck mb-3 text-center mx-5">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">STEP 1</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">Make a Buget</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Total your sources of income and itemize your expenses. Time to face the truth, how much are you
+                        really spending?</li>
 
-    <!--<div class="row">INCOME</div>
-                <form>
-                    <input type="number" name="quantity">
-                </form>
-                      <div class="row">EXPENSES</div>
-                      <form>
-                          <input class="column" type="number" name="quantity">
-                      </form>
-                              <div class="row">SAVINGS</div>
-                         <form>
-                            <input class="column" type="number" name="quantity">
-                         </form>-->
+                </ul>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">STEP 2</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">Pay Your Bills</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Don't pay late fees! Schedule your bills and keep track of them here.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">STEP 3</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">Invest !!!</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>What has your money done for you lately? Don't let it sit there and put it to work! Look for
+                        potential investments.</li>
 
-    <div class="container">
-        <!--<h2>Basic Table</h2>-->
-        <!--<p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p> -->
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Income<div class="form-group">
-                            <label for="usr"></label>
-                            <input type="text" class="form-control" id="usr">
-                        </div>
-                    </th>
-                    <th>Expenses<div class="form-group">
-                            <label for="usr"></label>
-                            <input type="text" class="form-control" id="usr">
-                        </div>
-                    </th>
-                    <th>Savings<div class="form-group">
-                            <label for="usr"></label>
-                            <input type="text" class="form-control" id="usr">
-                        </div>
-                    </th>
-                </tr>
-            </thead>
-
-
-            </tr>
-            </tbody>
-        </table>
+                </ul>
+            </div>
+        </div>
     </div>
-
-
-
-    <div class="container">
-        <table class="table table-bordered">
-            <p>Potential Investments</p>
-            <thead>
-                <tr>
-                    <th>News<div class="form-group">
-                            <label for="usr"></label>
-                            <input type="text" class="form-control" id="usr">
-                        </div>
-                    </th>
-                    <th>Search stocks<div class="form-group">
-                            <label for="usr"></label>
-                            <input type="text" class="form-control" id="usr">
-                        </div>
-                    </th>
-
+</div>
+<div class="content pie">
+    <div class="wrapper">
+        <div class="chartjs-size-monitor">
+            <div class="chartjs-size-monitor-expand">
+                <div class=""></div>
+            </div>
+            <div class="chartjs-size-monitor-shrink">
+                <div class=""></div>
+            </div>
+        </div>
+        <canvas id="chart-0" width="800" height="400" class="chartjs-render-monitor"
+            style="display: block; width: 800px; height: 400px;"></canvas>
     </div>
-
-
-
-
-
+    <div class="toolbar">
+        <button onclick="randomize()">Randomize</button>
+        <button onclick="addDataset()">Add Dataset</button>
+        <button onclick="removeDataset()">Remove Dataset</button>
+        <button onclick="togglePieDoughnut()">Toggle Doughnut View</button>
+    </div>
 </div>

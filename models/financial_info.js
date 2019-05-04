@@ -1,9 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
   var Financial_Infos = sequelize.define("Financial_Infos", {
-    monthly_salary: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+    id: {
+      type: DataTypes.STRING,
+      primaryKey: true
     },
+    monthly_salary: {
+      type: DataTypes.INTEGER
+    },
+
     balance: {
       type: DataTypes.INTEGER
     },

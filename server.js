@@ -3,9 +3,12 @@ var hbs = require("express-handlebars");
 var app = express();
 // Requiring our models for syncing
 var db = require("./models");
-
+const config = require("config");
 var PORT = process.env.PORT || 8080;
-
+if (!config.get("jwtPrivateKey")) {
+  console.error("FATAL ERROR : jwtPrivateKey is not defined");
+  process.exit(1);
+}
 //  HANDLEBARS
 //  =============================================================
 app.engine(".hbs", hbs({ defaultLayout: "main", extname: ".hbs" }));
