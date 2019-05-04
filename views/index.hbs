@@ -80,7 +80,7 @@
         </div>
     </div>
 </div>
-<div class="content pie">
+<div class=" my-5 content pie">
     <div class="wrapper">
         <div class="chartjs-size-monitor">
             <div class="chartjs-size-monitor-expand">
@@ -90,13 +90,89 @@
                 <div class=""></div>
             </div>
         </div>
-        <canvas id="chart-0" width="800" height="400" class="chartjs-render-monitor"
+        <canvas id="chart-1" width="800" height="400" class="m-4 chartjs-render-monitor"
+            style="display: block; width: 800px; height: 400px;"></canvas>
+        <canvas id="chart-0" width="800" height="400" class="m-4 chartjs-render-monitor"
             style="display: block; width: 800px; height: 400px;"></canvas>
     </div>
-    <div class="toolbar">
-        <button onclick="randomize()">Randomize</button>
-        <button onclick="addDataset()">Add Dataset</button>
-        <button onclick="removeDataset()">Remove Dataset</button>
-        <button onclick="togglePieDoughnut()">Toggle Doughnut View</button>
-    </div>
+
 </div>
+
+<form id="form1" class="h-100 mt-4 pt-5">
+
+    <div class="input-group-prepend Financial_Infos">
+        <span class="input-group-text" id="basic-addon1">Monthly salary</span>
+        <input type="text" class="form-control monthly-income-form formInput" placeholder="...">
+        <div class="input-group-btn">
+            <button id="fu" class="btn btn-default" style="display: none">
+                <i class="glyphicon glyphicon-search">FIX ME</i>
+            </button>
+            <button id="editBtn1" class="btn btn-default">
+                <i class="glyphicon glyphicon-search">Edit</i>
+            </button>
+        </div>
+    </div>
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Housing</span>
+        <input type="text" class="form-control housing-form formInput" placeholder="...">
+        <div class="input-group-btn">
+            <button id="editBtn2" class="btn btn-default">
+                <i class="glyphicon glyphicon-search">Edit</i>
+            </button>
+        </div>
+    </div>
+
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Utilities</span>
+        <input type="text" class="form-control utilities-form formInput" placeholder="...">
+        <div class="input-group-btn">
+            <button id="editBtn3" class="btn btn-default">
+                <i class="glyphicon glyphicon-search">Edit</i>
+            </button>
+        </div>
+    </div>
+
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Food</span>
+        <input type="text" class="form-control food-form formInput" placeholder="...">{{food}}
+        <div class="input-group-btn">
+            <button id="editBtn4" class="btn btn-default">
+                <i class="glyphicon glyphicon-search">Edit</i>
+            </button>
+        </div>
+    </div>
+
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Insurance</span>
+        <input type="text" class="form-control insurance-form formInput" placeholder="...">
+        <div class="input-group-btn">
+            <button id="editBtn5" class="btn btn-default">
+                <i class="glyphicon glyphicon-search">Edit</i>
+            </button>
+        </div>
+    </div>
+
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Debts</span>
+        <input type="text" class="form-control debts-form formInput" placeholder="...">
+        <div class="input-group-btn">
+            <button id="editBtn6" class="btn btn-default">
+                <i class="glyphicon glyphicon-search">Edit</i>
+            </button>
+        </div>
+    </div>
+
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Monthly expenses</span>
+        <input type="text" class="form-control monthly-expenses-form formInput" placeholder="...">
+    </div>
+
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Savings</span>
+
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Total balance</span>
+            <input type="text" class="form-control balance-form formInput" placeholder="...">ß
+        </div>
+
+</form>

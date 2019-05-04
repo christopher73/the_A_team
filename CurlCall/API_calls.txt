@@ -3,3 +3,4 @@
 ***** test POST calls ******
 
 curl -d '{"id":"1","monthly_salary":"4500","balance":"450","housing":"45","utilities":"45","food":"45","insurance":"45","debts":"45","total_expenses":"45","savings":"45"}' -H "Content-Type: application/json" -X POST http://localhost:8080/submit_info
+ hi

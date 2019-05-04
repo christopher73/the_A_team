@@ -66,15 +66,15 @@ module.exports = function(app) {
     }).then(function(new_user) {
       db.Financial_Infos.create({
         id: new_user.id,
-        monthly_salary: 0,
-        balance: 0,
-        housing: 0,
-        utilities: 0,
-        food: 0,
-        insurance: 0,
-        debts: 0,
-        total_expenses: 0,
-        savings: 0
+        monthly_salary: 4000,
+        balance: 300,
+        housing: 1200,
+        utilities: 300,
+        food: 100,
+        insurance: 50,
+        debts: 100,
+        total_expenses: 3000,
+        savings: 1000
       });
       const token = jwt.sign({ id: new_user.id }, config.get("jwtPrivateKey"));
       res.json({
