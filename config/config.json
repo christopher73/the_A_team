@@ -1,6 +1,6 @@
 {
   "development": {
-    "username": "Christopher",
+    "username": "root",
     "password": "",
     "database": "fin_app_db",
     "host": "127.0.0.1",

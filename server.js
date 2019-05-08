@@ -1,6 +1,7 @@
 var express = require("express");
 var hbs = require("express-handlebars");
 var app = express();
+const fetch = require('node-fetch');
 // Requiring our models for syncing
 var db = require("./models");
 const config = require("config");

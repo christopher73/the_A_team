@@ -1,0 +1,233 @@
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+        title="Close Modal">&times;</span>
+    <form class="form-signin">
+        <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control m-2" placeholder="Email address" required=""
+            autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control m-2" placeholder="Password" required="">
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button onclick="document.getElementById('id01').style.display='none'"
+            class="btn btn-lg btn-secondary btn-block cancelbtn">Cancel</button>
+        <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
+    </form>
+</div>
+<div id="id02" class="modal">
+    <span onclick="document.getElementById('id02').style.display='none'" class="close"
+        title="Close Modal">&times;</span>
+    <form class="form-signin">
+        <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign Up</h1>
+        <label for="user-name" class="sr-only">User Name</label>
+        <input type="text" id="UserName" class="form-control m-2" placeholder="User Name" required="">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control m-2" placeholder="Email address" required=""
+            autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control m-2" placeholder="Password" required="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="re-entry-inputPassword" class="form-control m-2" placeholder="Re-entry Password"
+            required="">
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up !!!</button>
+        <button onclick="document.getElementById('id02').style.display='none'"
+            class="btn btn-lg btn-secondary btn-block cancelbtn">Cancel</button>
+        <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
+    </form>
+</div>
+
+<div style="padding-left:16px">
+    <h2 style="color:white"> The Finance Hub</h2>
+
+{{!-- <form>
+
+  <div class="input-group-prepend Financial_Infos">
+    <span class="input-group-text" id="basic-addon1">Monthly salary</span>
+    <input type="text" class="form-control monthly-income-form formInput" placeholder="...">
+    <div class="input-group-btn">
+      <button id="fu" class="btn btn-default" style="display: none">
+        <i class="glyphicon glyphicon-search">FIX ME</i>
+      </button>
+      <button id="editBtn1" class="btn btn-default">
+        <i class="glyphicon glyphicon-search">Edit</i>
+      </button>
+    </div>
+  </div>
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Housing</span>
+    <input type="text" class="form-control housing-form formInput">
+    <div class="input-group-btn">
+      <button id="editBtn2" class="btn btn-default">
+        <i class="glyphicon glyphicon-search">Edit</i>
+      </button>
+    </div>
+  </div>
+
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Utilities</span>
+    <input type="text" class="form-control utilities-form formInput" placeholder="...">{{utilities}}
+    <div class="input-group-btn">
+      <button id="editBtn3" class="btn btn-default">
+        <i class="glyphicon glyphicon-search">Edit</i>
+      </button>
+    </div>
+  </div>
+
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Food</span>
+    <input type="text" class="form-control food-form formInput" placeholder="...">{{food}}
+    <div class="input-group-btn">
+      <button id="editBtn4" class="btn btn-default">
+        <i class="glyphicon glyphicon-search">Edit</i>
+      </button>
+    </div>
+  </div>
+
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Insurance</span>
+    <input type="text" class="form-control insurance-form formInput" placeholder="...">{{insurance}}
+    <div class="input-group-btn">
+      <button id="editBtn5" class="btn btn-default">
+        <i class="glyphicon glyphicon-search">Edit</i>
+      </button>
+    </div>
+  </div>
+
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Debts</span>
+    <input type="text" class="form-control debts-form formInput" placeholder="...">{{debts}}
+    <div class="input-group-btn">
+      <button id="editBtn6" class="btn btn-default">
+        <i class="glyphicon glyphicon-search">Edit</i>
+      </button>
+    </div>
+  </div>
+
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Monthly expenses</span>
+    <input type="text" class="form-control monthly-expenses-form formInput" placeholder="..." disabled>{{monthly_expenses}}
+  </div>
+
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Savings</span>
+    <input type="text" class="form-control savings-form formInput" placeholder="..." disabled>{{savings}}
+  </div>
+
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Total balance</span>
+    <input type="text" class="form-control balance-form formInput" placeholder="..." disabled>{{total_balance}}
+  </div>
+
+</form> --}}
+
+{{!-- <script>
+    // MONTHLY INCOME
+  $("#editBtn1").on("click", function(event) {
+    event.preventDefault();
+    
+    $('.monthly-income-form').prop(", true);
+    $(".monthly-income-form").removeAttr(");
+
+    $('.monthly-income-form').keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        $(".monthly-income-form").attr(");
+    }
+  });
+  });
+// MONTHLY EXPENSES
+  $("#editBtn2").on("click", function(event) {
+    //event.preventDefault();
+
+    $('.housing-form').prop(', function(i, v) { return !v; });
+    
+    //$('.housing-form').prop(", true);
+    //$(".housing-form").removeAttr(");
+
+    //$('.housing-form').keypress(function(event){
+    //var keycode = (event.keyCode ? event.keyCode : event.which);
+    //if(keycode == '13'){
+    //    $(".housing-form").attr(");
+    //}
+  });
+  });
+// TOTAL BALANCE
+  $("#editBtn3").on("click", function(event) {
+    event.preventDefault();
+    
+    $('.utilities-form').prop(", true);
+    $(".utilities-form").removeAttr(");
+
+    $('.utilities-form').keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        $(".utilities-form").attr(");
+    }
+  });
+  });
+  // TOTAL BALANCE
+  $("#editBtn4").on("click", function(event) {
+    event.preventDefault();
+    
+    $('.food-form').prop(", true);
+    $(".food-form").removeAttr(");
+
+    $('.food-form').keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        $(".food-form").attr(");
+    }
+  });
+  });
+  // TOTAL BALANCE
+  $("#editBtn5").on("click", function(event) {
+    event.preventDefault();
+    
+    $('.insurance-form').prop(", true);
+    $(".insurance-form").removeAttr(");
+
+    $('.insurance-form').keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        $(".insurance-form").attr(");
+    }
+  });
+  });
+  // TOTAL BALANCE
+  $("#editBtn6").on("click", function(event) {
+    event.preventDefault();
+    
+    $('.debts-form').prop(", true);
+    $(".debts-form").removeAttr(");
+
+    $('.debts-form').keypress(function(event){
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        $(".debts-form").attr(");
+    }
+  });
+  });
+    // Send the PUT request.
+    // $.ajax("/api/app/", {
+    //   type: "PUT",
+    //   data: updatedValue
+    // }).then(
+    //   function() {
+    //     console.log("value changed to ", userInput);
+    //     // Reload the page to get the updated list
+    //     location.reload();
+    //   });
+
+</script> --}}

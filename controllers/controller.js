@@ -6,12 +6,14 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const auth = require("../middleware/auth");
 
+
 module.exports = function(app) {
   //  POST USERS LOGIN INFO
   //  =============================================================
 
   app.get("/", function(req, res) {
     res.render("index", false);
+
   });
 
   // app.post("/submit_user", function(req, res) {
@@ -47,12 +49,10 @@ module.exports = function(app) {
         "total_expenses",
         "savings"
       ]
-    }).then(function(dbFinInfo) {
-      let response = dbFinInfo;
-      res.send(response);
+    }).then(response => {
+        res.json(response);
     });
   });
-
   //=================== create USER
   app.post("/users", async (req, res) => {
     let user = await db.Users.findOne({ where: { email: req.body.email } });

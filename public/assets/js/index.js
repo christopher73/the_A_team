@@ -4,6 +4,7 @@ $(document).ready(function(e) {
   });
   $(".pie").hide();
   $("#pie").hide();
+  $("#budget").hide();
 
   $("#btn-s").on("click", function() {
     $("#id02").show();
@@ -43,8 +44,22 @@ $(document).ready(function(e) {
           console.log(resultData);
           $("#mainpage").hide();
           $(".pie").show();
+          $("#budget").show();
           var ctx1 = document.getElementById("chart-0").getContext("2d");
           var ctx = document.getElementById("chart-1").getContext("2d");
+          
+          // POPULATE BUDGET
+          $('#monthly-income').append(JSON.stringify(resultData[0].monthly_salary));
+          $('#housing').append(JSON.stringify(resultData[0].housing));
+          $('#utilities').append(JSON.stringify(resultData[0].utilities));
+          $('#food').append(JSON.stringify(resultData[0].food));
+          $('#insurance').append(JSON.stringify(resultData[0].insurance));
+          $('#debts').append(JSON.stringify(resultData[0].debts));
+          $('#total-expenses').append(JSON.stringify(resultData[0].total_expenses));
+          $('#savings').append(JSON.stringify(resultData[0].savings));
+          $('#balance').append(JSON.stringify(resultData[0].balance));
+
+          //====================================================
           var myChart1 = new Chart(ctx1, {
             type: "pie",
             data: {
@@ -185,6 +200,7 @@ $(document).ready(function(e) {
     }).then(function() {
       $("#id02").hide();
       $(".upb").hide();
+      $("#budget").show();
 
       //   console.log(localStorage.getItem("token"));
       $.ajax({
@@ -197,6 +213,18 @@ $(document).ready(function(e) {
           console.log(resultData);
           $("#mainpage").hide();
           $("#form1").show();
+
+          // POPULATE BUDGET
+          $('#monthly-income').append(JSON.stringify(resultData[0].monthly_salary));
+          $('#housing').append(JSON.stringify(resultData[0].housing));
+          $('#utilities').append(JSON.stringify(resultData[0].utilities));
+          $('#food').append(JSON.stringify(resultData[0].food));
+          $('#insurance').append(JSON.stringify(resultData[0].insurance));
+          $('#debts').append(JSON.stringify(resultData[0].debts));
+          $('#total-expenses').append(JSON.stringify(resultData[0].total_expenses));
+          $('#savings').append(JSON.stringify(resultData[0].savings));
+          $('#balance').append(JSON.stringify(resultData[0].balance));
+
           var ctx = document.getElementById("chart-0").getContext("2d");
           var myChart = new Chart(ctx, {
             type: "line",
@@ -242,4 +270,10 @@ $(document).ready(function(e) {
       });
     });
   });
+
+ 
+
+
+
+
 });
